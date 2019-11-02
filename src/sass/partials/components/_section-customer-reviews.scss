@@ -1,0 +1,114 @@
+.section-customer-reviews {
+  padding: 100px 0 80px 0;
+  text-align: center;
+}
+
+.custom-slider {
+  position: relative;
+  text-align: left;
+  margin: 0 auto;
+  @media(max-width: 1150px) {
+    max-width: 710px
+  }
+  @media(max-width: 768px) {
+    max-width: 315px
+  }
+
+  .slider-wrapper {
+    overflow: hidden;
+  }
+
+  .ticker {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .item {
+    padding: 30px 100px 50px 20px;
+    min-width: 395px;
+
+    .review {
+      background: $light-grey;
+      border-radius: 4px;
+      line-height: 125%;
+      padding: 25px 10px;
+      position: relative;
+      margin-bottom: 20px;
+      font-style: italic;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 25px;
+        width: 0;
+        height: 0;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-top: 15px solid $light-grey;
+      }
+    }
+
+    .author {
+      display: flex;
+
+      .avatar {
+        width: 70px;
+        height: 70px;
+
+        img {
+          display: block;
+          max-width: 100%;
+        }
+
+        &.circle {
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+
+      .name {
+        width: calc(100% - 70px);
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          color: $font-color-3;
+          font-weight: bold;
+          font-size: 20px;
+          padding-bottom: 5px;
+        }
+      }
+
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 110px;
+    cursor: pointer;
+    color: $orange;
+    font-size: 24px;
+    transition: .3s;
+
+    &.left {
+      left: -20px;
+
+      &:active {
+        transform: translateX(-2px);
+      }
+    }
+
+    &.right {
+      right: -20px;
+
+      &:active {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+}

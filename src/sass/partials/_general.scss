@@ -63,6 +63,27 @@ body {
   }
 }
 
+h3 {
+  color: $font-color-3;
+  font-weight: bold;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+p {
+  line-height: 145%;
+  padding-bottom: 20px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  display: block;
+  margin: 20px auto 30px;
+  max-width: 500px;
+  background: $orange;
+}
+
 .bttn {
   display: inline-block;
   font-size: 15px;

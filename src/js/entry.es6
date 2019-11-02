@@ -1,4 +1,5 @@
 require("../sass/style.scss");
+require("./custom/custom-slider.es6");
 
 (function ($) {
 

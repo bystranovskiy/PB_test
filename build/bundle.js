@@ -78,6 +78,7 @@ module.exports = __webpack_require__(1);
 
 
 __webpack_require__(2);
+__webpack_require__(7);
 
 (function ($) {
 
@@ -123,6 +124,63 @@ __webpack_require__(2);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function ($) {
+  /** Custom slider **/
+
+  $('.custom-slider').each(function () {
+    var ticker = $(this).find('.ticker');
+
+    var itemWidth = $(this).find('.item').outerWidth();
+    var itemLength = $(this).find('.item').length;
+
+    var step = 0;
+
+    $(this).find('.nav').on('click', function () {
+      var width = $(window).width();
+      var display = width < 769 ? 1 : width > 769 && width < 1151 ? 2 : 3;
+
+      if ($(this).hasClass('left')) {
+        if (step === 0) {
+          ticker.animate({
+            left: "-" + itemWidth * (itemLength - display)
+          });
+          step = itemLength - display;
+        } else {
+          ticker.animate({
+            left: "+=" + itemWidth + ""
+          });
+          step--;
+        }
+      } else {
+        step++;
+        if (step === itemLength - (display - 1)) {
+          ticker.animate({
+            left: "0"
+          });
+          step = 0;
+        } else {
+          ticker.animate({
+            left: "-=" + itemWidth + ""
+          });
+        }
+      }
+    });
+  });
+
+  /** Custom slider end **/
+})(jQuery);
 
 /***/ })
 /******/ ]);
