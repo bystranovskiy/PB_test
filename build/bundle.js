@@ -79,6 +79,7 @@ module.exports = __webpack_require__(1);
 
 __webpack_require__(2);
 __webpack_require__(7);
+__webpack_require__(8);
 
 (function ($) {
 
@@ -139,7 +140,7 @@ __webpack_require__(7);
 (function ($) {
   /** Custom slider **/
 
-  $('.custom-slider').each(function () {
+  $('.custom-slider').length && $('.custom-slider').each(function () {
     var ticker = $(this).find('.ticker');
 
     var itemWidth = $(this).find('.item').outerWidth();
@@ -180,6 +181,47 @@ __webpack_require__(7);
   });
 
   /** Custom slider end **/
+})(jQuery);
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function ($) {
+
+  /** Custom parallax **/
+
+  $('.section-parallax-bg').length && $('.section-parallax-bg').each(function () {
+
+    var section = $(this);
+    var parallax = $(this).find('.parallax-bg');
+    var translateY = 0;
+
+    $(window).on("load resize scroll", function (e) {
+
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+      var elemTop = parallax.offset().top;
+      var elemBottom = elemTop + parallax.outerHeight();
+
+      var isOnScreen = elemTop <= docViewBottom && docViewTop <= elemBottom;
+
+      var clearance = parallax.outerHeight() - section.outerHeight();
+      var coefficient = (elemBottom - elemTop + $(window).height()) / clearance;
+
+      isOnScreen ? translateY = Math.round((docViewBottom - elemTop) / coefficient) : translateY;
+
+      parallax.css({
+        'transform': 'matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,-' + translateY + ',0,1)',
+        '-webkit-transform': 'matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,-' + translateY + ',0,1)'
+      });
+    });
+  });
+
+  /** Custom parallax end **/
 })(jQuery);
 
 /***/ })
