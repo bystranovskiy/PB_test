@@ -1,6 +1,8 @@
 (function ($) {
   /** Custom slider **/
 
+  $('.custom-slider').length &&
+
   $('.custom-slider').each(function () {
     const ticker = $(this).find('.ticker');
 

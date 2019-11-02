@@ -1,5 +1,6 @@
 require("../sass/style.scss");
 require("./custom/custom-slider.es6");
+require("./custom/custom-parallax.es6");
 
 (function ($) {
 
