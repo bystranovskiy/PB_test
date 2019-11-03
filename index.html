@@ -686,6 +686,39 @@
   </div>
 </section>
 
+<section class="section-contact-us">
+  <div class="container">
+    <h2 class="section-title">CONTACT US</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <form class="contact-form">
+      <div class="row">
+        <div class="col">
+          <div class="input-wrapper">
+            <input type="text" id="contact-name" value="" onkeyup="this.setAttribute('value', this.value);">
+            <label for="contact-name">Name</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="email" id="contact-email" value="" onkeyup="this.setAttribute('value', this.value);">
+            <label for="contact-email">Email</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="contact-subject" value="" onkeyup="this.setAttribute('value', this.value);">
+            <label for="contact-subject">Subject</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-wrapper">
+            <textarea id="contact-message" cols="30" rows="10" value=""
+                      onkeyup="this.setAttribute('value', this.value);"></textarea>
+            <label for="contact-message">Message</label>
+          </div>
+        </div>
+      </div>
+      <input type="submit" class="bttn" value="Send Message">
+    </form>
+  </div>
+</section>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/build/bundle.js"></script>
 </body>

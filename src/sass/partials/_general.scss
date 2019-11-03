@@ -95,6 +95,7 @@ hr {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .1);
   transition: .3s;
   font-weight: 600;
+  cursor: pointer;
 
   &:hover {
     background: lighten($orange, 5%);

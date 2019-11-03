@@ -269,6 +269,7 @@ hr {
   -o-transition: .3s;
   transition: .3s;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .bttn:hover {
@@ -1691,6 +1692,104 @@ hr {
 
 .section-parallax-bg .section-title:after {
   background: #fff;
+}
+
+.section-contact-us {
+  text-align: center;
+  padding: 100px 0 80px;
+}
+
+.section-contact-us .contact-form {
+  padding: 30px 0;
+}
+
+.section-contact-us .col {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .section-contact-us .col {
+    width: 100%;
+  }
+}
+
+.section-contact-us .input-wrapper {
+  position: relative;
+  margin: 30px 0 32px 0;
+}
+
+.section-contact-us .input-wrapper label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #bdbdbd;
+  font-size: 14px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: text;
+}
+
+.section-contact-us .input-wrapper input[type="text"],
+.section-contact-us .input-wrapper input[type="email"],
+.section-contact-us .input-wrapper input[type="password"],
+.section-contact-us .input-wrapper textarea {
+  width: 100%;
+  display: block;
+  height: 30px;
+  padding: 0 15px;
+  border-bottom: 1px solid #cccccc;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.section-contact-us .input-wrapper input[type="text"]:focus + label,
+.section-contact-us .input-wrapper input[type="text"]:not([value=""]) + label,
+.section-contact-us .input-wrapper input[type="email"]:focus + label,
+.section-contact-us .input-wrapper input[type="email"]:not([value=""]) + label,
+.section-contact-us .input-wrapper input[type="password"]:focus + label,
+.section-contact-us .input-wrapper input[type="password"]:not([value=""]) + label,
+.section-contact-us .input-wrapper textarea:focus + label,
+.section-contact-us .input-wrapper textarea:not([value=""]) + label {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  top: -10px;
+  font-size: 10px;
+  cursor: default;
+}
+
+.section-contact-us .input-wrapper input[type="text"]:not([value=""]):invalid,
+.section-contact-us .input-wrapper input[type="email"]:not([value=""]):invalid,
+.section-contact-us .input-wrapper input[type="password"]:not([value=""]):invalid,
+.section-contact-us .input-wrapper textarea:not([value=""]):invalid {
+  border-bottom-color: red;
+}
+
+.section-contact-us .input-wrapper input[type="text"]:not([value=""]):invalid + label,
+.section-contact-us .input-wrapper input[type="email"]:not([value=""]):invalid + label,
+.section-contact-us .input-wrapper input[type="password"]:not([value=""]):invalid + label,
+.section-contact-us .input-wrapper textarea:not([value=""]):invalid + label {
+  color: red;
+}
+
+.section-contact-us .input-wrapper textarea {
+  height: 154px;
+}
+
+.section-contact-us .input-wrapper textarea + label {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  top: 7px;
+}
+
+.section-contact-us input[type="submit"] {
+  margin-top: 10px;
 }
 
 
