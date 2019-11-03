@@ -2,12 +2,12 @@
 
   /** Custom parallax **/
 
-  $('.section-parallax-bg').length &&
+  $('.parallax-bg').length &&
 
-  $('.section-parallax-bg').each(function () {
+  $('.parallax-bg').each(function () {
 
     const section = $(this);
-    const parallax = $(this).find('.parallax-bg');
+    const parallax = $(this).find('.parallax');
     let translateY = 0;
 
     $(window).on("load resize scroll", function (e) {

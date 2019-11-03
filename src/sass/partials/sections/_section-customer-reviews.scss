@@ -66,6 +66,17 @@
           border-radius: 50%;
           overflow: hidden;
         }
+
+        &.square {
+          border-radius: 4px;
+          padding: 2px;
+          border: 1px solid $grey;
+          overflow: hidden;
+
+          img {
+            border-radius: 2px;
+          }
+        }
       }
 
       .name {
@@ -108,6 +119,23 @@
       &:active {
         transform: translateX(2px);
       }
+    }
+  }
+
+  &.dark {
+    .item {
+      .review {
+        background: $font-color-2;
+        color: $light-grey;
+
+        &:after {
+          border-top-color: $font-color-2;
+        }
+      }
+    }
+
+    .nav {
+      color: $font-color-2;
     }
   }
 
