@@ -1,0 +1,48 @@
+.section-why-this-is-awesome {
+  padding: 100px 0 80px 0;
+  text-align: center;
+
+  .col {
+    padding-top: 25px;
+    width: 33.3%;
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+
+    h3 {
+      color: #333333;
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 24px;
+      transition: .3s;
+    }
+
+    p {
+      line-height: 145%;
+      padding-bottom: 20px;
+      transition: .3s;
+    }
+
+    [class^="icon-"] {
+      display: block;
+      font-size: 28px;
+      border: 2px solid $orange;
+      line-height: 66px;
+      width: 70px;
+      height: 70px;
+      text-align: center;
+      margin: 30px auto;
+      color: $orange;
+      border-radius: 50%;
+      transition: .3s;
+    }
+
+    &:hover {
+      [class^="icon-"] {
+        color: #fff;
+        background: $orange;
+      }
+    }
+  }
+
+}

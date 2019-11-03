@@ -1,0 +1,168 @@
+.section-header {
+  position: relative;
+  color: #fff;
+  padding: 135px 0 60px;
+  min-height: 710px;
+  display: flex;
+  align-items: center;
+  @media(max-width: 768px) {
+    text-align: center;
+    padding: 80px 0 30px
+  }
+
+  .container {
+    position: relative;
+  }
+
+
+  .col {
+    width: 50%;
+    padding: 15px;
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .section-title {
+    color: #fff;
+    padding-bottom: 34px;
+
+    @media(min-width: 769px) {
+      text-align: left;
+    }
+
+    &:after {
+      @media(min-width: 769px) {
+        transform: none;
+        left: 0;
+      }
+      background: #fff;
+    }
+  }
+
+  p {
+    padding: 10px 0 40px 0;
+    line-height: 150%;
+    font-size: 15.6px;
+  }
+
+  .col-content {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .col-form {
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .get-started {
+    background: #fff;
+    display: inline-block;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    @media(min-width: 769px) {
+      max-width: 360px;
+    }
+
+
+    .form-header {
+      padding: 17px;
+      background: $light-grey;
+      text-align: center;
+
+      .form-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+
+        .orange {
+          color: $orange;
+        }
+      }
+    }
+
+    .form-body {
+      padding: 0 36px;
+
+      .input-wrapper {
+        position: relative;
+        margin: 30px 0 45px 0;
+
+        label {
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          transform: translateY(-50%);
+          color: #bdbdbd;
+          font-size: 14px;
+          transition: .3s;
+          cursor: text;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+          width: 100%;
+          display: block;
+          height: 30px;
+          padding: 0 15px;
+          border-bottom: 1px solid $grey;
+          border-left: 1px solid #fbfbfb;
+          border-right: 1px solid #fbfbfb;
+          transition: .3s;
+
+          &:focus, &:not([value=""]) {
+            & + label {
+              transform: none;
+              top: -10px;
+              font-size: 10px;
+              cursor: default;
+            }
+          }
+
+          &:not([value=""]):invalid {
+            border-bottom-color: red;
+
+            & + label {
+              color: red;
+            }
+          }
+        }
+
+      }
+
+    }
+
+    .form-footer {
+      input[type="submit"] {
+        display: block;
+        text-align: center;
+        color: #fff;
+        background: $orange;
+        font-size: 15px;
+        padding: 18px 0;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        transition: .3s;
+
+        &:hover {
+          background: lighten($orange, 5%);
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+
+      }
+    }
+
+  }
+
+  &.parallax-bg {
+    .parallax {
+      height: calc(100% + 150px);
+    }
+  }
+}
