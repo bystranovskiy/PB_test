@@ -1792,5 +1792,63 @@ hr {
   margin-top: 10px;
 }
 
+.footer {
+  text-align: center;
+  background: #37495e;
+  color: #cccccc;
+  padding: 15px 0;
+}
+
+.footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .footer .social-links {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.footer .social-links a {
+  text-decoration: none;
+  display: block;
+  color: #cccccc;
+  padding: 5px 8px;
+  font-size: 24px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.footer .social-links a:hover {
+  color: #fff;
+  -webkit-transform: rotate(360deg) scale(1.5);
+  -ms-transform: rotate(360deg) scale(1.5);
+  transform: rotate(360deg) scale(1.5);
+}
+
+@media (max-width: 1150px) {
+  .footer .social-links a {
+    padding: 5px 10px;
+    font-size: 34px;
+  }
+}
+
+.footer .copyright {
+  padding-top: 5px;
+  font-size: 11px;
+}
+
 
 /*# sourceMappingURL=style.css.map*/
