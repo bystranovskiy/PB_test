@@ -3,49 +3,41 @@
 
   $('.custom-slider').each(function () {
 
-    const slider = $(this);
-    const ticker = slider.find('.ticker');
-    const item = slider.find('.item');
-    const itemWidth = item.outerWidth();
-    const itemLength = item.length;
+    const slider      = $(this);
+    const ticker      = slider.find('.ticker');
+    const item        = ticker.find('.item');
+    const itemWidth   = item.outerWidth();
+    const itemLength  = item.length;
 
-    let step = 0;
+    let   step        = 0;
 
     slider.find('.nav').on('click', function () {
-      const width = $(window).width();
 
-      /** Display blocks count **/
-      let display = 3;
-      if (width < 769) {
-        display = 1;
-      } else if (width > 769 && width < 1151) {
-        display = 2;
-      } else {
-        display = 3;
-      }
+      /** Responsive items count **/
+      const smallW    = $(window).width() < 769;
+      const largeW    = $(window).width() > 1150;
+      const display   = smallW ? 1 : largeW ? 3 : 2;
 
-      /** Calculate left displacement **/
-      let left;
+      /** Calculate left offset **/
+      let offset;
       if ($(this).hasClass('left')) {
         if (step === 0) {
-          left = `-${itemWidth * (itemLength - display)}`;
+          offset = `-${itemWidth * (itemLength - display)}`;
           step = itemLength - display;
         } else {
-          left = `+=${itemWidth}`;
+          offset = `+=${itemWidth}`;
           step--;
         }
       } else {
         step++;
         if (step === itemLength - (display - 1)) {
-          left = 0;
-          step = 0;
+          offset = step = 0;
         } else {
-          left = `-=${itemWidth}`;
+          offset = `-=${itemWidth}`;
         }
-
       }
 
-      ticker.animate({left: left});
+      ticker.animate({left: offset});
 
     });
 

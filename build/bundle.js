@@ -135,46 +135,39 @@ __webpack_require__(6);
 
     var slider = $(this);
     var ticker = slider.find('.ticker');
-    var item = slider.find('.item');
+    var item = ticker.find('.item');
     var itemWidth = item.outerWidth();
     var itemLength = item.length;
 
     var step = 0;
 
     slider.find('.nav').on('click', function () {
-      var width = $(window).width();
 
-      /** Display blocks count **/
-      var display = 3;
-      if (width < 769) {
-        display = 1;
-      } else if (width > 769 && width < 1151) {
-        display = 2;
-      } else {
-        display = 3;
-      }
+      /** Responsive items count **/
+      var smallW = $(window).width() < 769;
+      var largeW = $(window).width() > 1150;
+      var display = smallW ? 1 : largeW ? 3 : 2;
 
-      /** Calculate left displacement **/
-      var left = void 0;
+      /** Calculate left offset **/
+      var offset = void 0;
       if ($(this).hasClass('left')) {
         if (step === 0) {
-          left = '-' + itemWidth * (itemLength - display);
+          offset = '-' + itemWidth * (itemLength - display);
           step = itemLength - display;
         } else {
-          left = '+=' + itemWidth;
+          offset = '+=' + itemWidth;
           step--;
         }
       } else {
         step++;
         if (step === itemLength - (display - 1)) {
-          left = 0;
-          step = 0;
+          offset = step = 0;
         } else {
-          left = '-=' + itemWidth;
+          offset = '-=' + itemWidth;
         }
       }
 
-      ticker.animate({ left: left });
+      ticker.animate({ left: offset });
     });
   });
 
@@ -221,25 +214,31 @@ __webpack_require__(6);
 
     var section = $(this);
     var parallax = $(this).find('.parallax');
-    var translateY = 0;
+    var offset = 0;
 
-    $(window).on("load resize scroll", function (e) {
+    var elemTop = void 0,
+        elemBottom = void 0,
+        clearance = void 0,
+        coefficient = void 0;
+
+    $(window).on("load resize", function () {
+      elemTop = parallax.offset().top;
+      elemBottom = elemTop + parallax.outerHeight();
+      clearance = parallax.outerHeight() - section.outerHeight();
+      coefficient = (elemBottom - elemTop + $(window).height()) / clearance;
+    });
+
+    $(window).on("scroll", function () {
 
       var docViewTop = $(window).scrollTop();
       var docViewBottom = docViewTop + $(window).height();
-      var elemTop = parallax.offset().top;
-      var elemBottom = elemTop + parallax.outerHeight();
-
       var isOnScreen = elemTop <= docViewBottom && docViewTop <= elemBottom;
 
-      var clearance = parallax.outerHeight() - section.outerHeight();
-      var coefficient = (elemBottom - elemTop + $(window).height()) / clearance;
-
-      isOnScreen ? translateY = Math.round((docViewBottom - elemTop) / coefficient) : translateY;
+      isOnScreen ? offset = Math.round((docViewBottom - elemTop) / coefficient) : offset;
 
       parallax.css({
-        'transform': 'matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,-' + translateY + ',0,1)',
-        '-webkit-transform': 'matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,-' + translateY + ',0,1)'
+        'transform': 'matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,-' + offset + ',0,1)',
+        '-webkit-transform': 'matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,-' + offset + ',0,1)'
       });
     });
   });
