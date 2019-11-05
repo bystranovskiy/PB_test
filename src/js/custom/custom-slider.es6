@@ -1,8 +1,6 @@
 (function ($) {
   /** Custom slider **/
 
-  $('.custom-slider').length &&
-
   $('.custom-slider').each(function () {
 
     const slider = $(this);
@@ -15,36 +13,39 @@
 
     slider.find('.nav').on('click', function () {
       const width = $(window).width();
-      let display = width < 769 ? 1 : width > 769 && width < 1151 ? 2 : 3;
 
+      /** Display blocks count **/
+      let display = 3;
+      if (width < 769) {
+        display = 1;
+      } else if (width > 769 && width < 1151) {
+        display = 2;
+      } else {
+        display = 3;
+      }
 
+      /** Calculate left displacement **/
+      let left;
       if ($(this).hasClass('left')) {
         if (step === 0) {
-          ticker.animate({
-            left: "-" + itemWidth * (itemLength - display)
-          });
+          left = `-${itemWidth * (itemLength - display)}`;
           step = itemLength - display;
         } else {
-          ticker.animate({
-            left: "+=" + itemWidth + ""
-          });
+          left = `+=${itemWidth}`;
           step--;
         }
-
       } else {
         step++;
         if (step === itemLength - (display - 1)) {
-          ticker.animate({
-            left: "0"
-          });
+          left = 0;
           step = 0;
         } else {
-          ticker.animate({
-            left: "-=" + itemWidth + ""
-          });
+          left = `-=${itemWidth}`;
         }
 
       }
+
+      ticker.animate({left: left});
 
     });
 
