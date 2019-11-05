@@ -3,8 +3,7 @@
   color: #fff;
   padding: 135px 0 60px;
   min-height: 710px;
-  display: flex;
-  align-items: center;
+  @include flex-align(center,center);
   @media(max-width: 768px) {
     text-align: center;
     padding: 80px 0 30px
@@ -47,14 +46,11 @@
   }
 
   .col-content {
-    display: flex;
     align-items: flex-end;
   }
 
   .col-form {
-    justify-content: flex-end;
-    display: flex;
-    align-items: flex-start;
+    @include flex-align(flex-start, flex-end);
   }
 
   .get-started {

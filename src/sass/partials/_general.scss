@@ -1,7 +1,7 @@
 body {
   font-size: 14px;
-  color: $font-color-1;
-  font-family: $font-family-1;
+  color: $font-color-primary;
+  font-family: $font-primary;
   font-weight: normal;
 }
 
@@ -21,11 +21,16 @@ body {
   }
 }
 
+.d-flex {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .section-title {
   font-size: 36px;
   text-transform: uppercase;
-  color: $font-color-3;
-  font-family: $font-family-2;
+  color: $font-color-secondary;
+  font-family: $font-secondary;
   text-align: center;
   position: relative;
   padding-bottom: 25px;
@@ -45,7 +50,7 @@ body {
 }
 
 .content-title {
-  color: $font-color-3;
+  color: $font-color-secondary;
   font-weight: bold;
   font-size: 20px;
   padding-bottom: 30px;
@@ -64,7 +69,7 @@ body {
 }
 
 h3 {
-  color: $font-color-3;
+  color: $font-color-secondary;
   font-weight: bold;
   padding-bottom: 20px;
   font-size: 20px;

@@ -6,7 +6,7 @@
   .row {
     @media(min-width: 769px) {
       flex-wrap: nowrap;
-      justify-content: space-between;
+      @include flex-align(unset, space-between);
     }
 
     .col {
@@ -38,21 +38,17 @@
 
 
   .col-social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-align(center, center);
     @media(min-width: 769px) {
-      justify-content: flex-end;
+      @include flex-align(center, flex-end);
     }
 
   }
 
   .social-links {
-    display: flex;
-    flex-wrap: nowrap;
     @media(max-width: 768px) {
       flex-wrap: wrap;
-      justify-content: center;
+      @include flex-align(unset, center);
     }
 
     a {
@@ -61,11 +57,10 @@
       color: $grey;
       padding: 5px 16px;
       font-size: 48px;
-      transition: .3s;
+      @include hover-animation(.3, ease-in-out, 0, spin-scale);
 
       &:hover {
-        color: $font-color-3;
-        transform: rotate(360deg) scale(1.5);
+        color: $font-color-secondary;
       }
 
       @media(max-width: 1150px) {

@@ -4,15 +4,16 @@
   $('.custom-slider').length &&
 
   $('.custom-slider').each(function () {
-    const ticker = $(this).find('.ticker');
 
-    const itemWidth = $(this).find('.item').outerWidth();
-    const itemLength = $(this).find('.item').length;
+    const slider = $(this);
+    const ticker = slider.find('.ticker');
+    const item = slider.find('.item');
+    const itemWidth = item.outerWidth();
+    const itemLength = item.length;
 
     let step = 0;
 
-
-    $(this).find('.nav').on('click', function () {
+    slider.find('.nav').on('click', function () {
       const width = $(window).width();
       let display = width < 769 ? 1 : width > 769 && width < 1151 ? 2 : 3;
 

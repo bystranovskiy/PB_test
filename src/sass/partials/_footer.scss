@@ -5,13 +5,10 @@
   padding: 15px 0;
 
   .social-links {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    @include flex-align(unset, center);
 
     @media(max-width: 768px) {
       flex-wrap: wrap;
-      justify-content: center;
     }
 
     a {
@@ -20,11 +17,10 @@
       color: $grey;
       padding: 5px 8px;
       font-size: 24px;
-      transition: .3s;
+      @include hover-animation(.3, ease-in-out, 0, spin-scale);
 
       &:hover {
         color: #fff;
-        transform: rotate(360deg) scale(1.5);
       }
 
       @media(max-width: 1150px) {

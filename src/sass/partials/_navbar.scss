@@ -11,7 +11,7 @@
   }
 
   .row {
-    justify-content: space-between;
+    @include flex-align(unset, space-between);
   }
 
   .logo {
@@ -45,7 +45,6 @@
   }
 
   .mainmenu {
-    display: flex;
     margin: 0 -15px;
     @media(min-width: 1200px) {
       margin: 0 -24px;
@@ -53,9 +52,7 @@
 
 
     @media(max-width: 768px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-align(center,center);
       flex-direction: column;
       top: 40px;
       position: fixed;
@@ -194,7 +191,7 @@
 
       a {
         text-decoration: none;
-        color: $font-color-2;
+        color: $font-color-auxiliary;
         transition: .3s;
         font-size: 12.4px;
 

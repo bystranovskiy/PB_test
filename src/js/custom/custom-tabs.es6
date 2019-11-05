@@ -3,12 +3,13 @@
   /** Custom tabs **/
 
   $('.custom-tabs .nav-item').on('click', function () {
-    if (!$(this).hasClass('active')) {
+    const item = $(this);
+    if (!item.hasClass('active')) {
       const tabs = $(this).closest('.custom-tabs');
       tabs.find('.nav-item').removeClass('active');
-      $(this).addClass('active');
+      item.addClass('active');
       tabs.find('.tabs-content-item').hide();
-      tabs.find('.tabs-content-item:eq(' + $(this).index() + ')').fadeIn('slow');
+      tabs.find('.tabs-content-item:eq(' + item.index() + ')').fadeIn('slow');
     }
   });
 

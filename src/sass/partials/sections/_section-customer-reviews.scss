@@ -20,8 +20,6 @@
 
   .ticker {
     position: relative;
-    display: flex;
-    flex-wrap: nowrap;
   }
 
   .item {
@@ -51,7 +49,6 @@
     }
 
     .author {
-      display: flex;
 
       .avatar {
         width: 70px;
@@ -82,12 +79,11 @@
       .name {
         width: calc(100% - 70px);
         padding-left: 20px;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
+        @include flex-align(unset, center);
 
         h3 {
-          color: $font-color-3;
+          color: $font-color-secondary;
           font-weight: bold;
           font-size: 20px;
           padding-bottom: 5px;
@@ -125,17 +121,17 @@
   &.dark {
     .item {
       .review {
-        background: $font-color-2;
+        background: $font-color-auxiliary;
         color: $light-grey;
 
         &:after {
-          border-top-color: $font-color-2;
+          border-top-color: $font-color-auxiliary;
         }
       }
     }
 
     .nav {
-      color: $font-color-2;
+      color: $font-color-auxiliary;
     }
   }
 

@@ -1,0 +1,11 @@
+@mixin flex-align($align, $justify) {
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin hover-animation($duration, $timing-function, $delay, $name) {
+  transition: $duration+s $timing-function $delay+s;
+  &:hover {
+    animation: $name $duration+s;
+  }
+}
