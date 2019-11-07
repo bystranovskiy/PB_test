@@ -1,15 +1,15 @@
 (function ($) {
 
   /** Custom slider **/
-  $('.custom-slider').each(function () {
+  $(".custom-slider").each(function () {
     const slider      = $(this);
-    const ticker      = slider.find('.ticker');
-    const item        = ticker.find('.item');
+    const ticker      = slider.find(".ticker");
+    const item        = ticker.find(".item");
     const itemWidth   = item.outerWidth();
     const itemLength  = item.length;
     let   step        = 0;
 
-    slider.find('.nav').on('click', function () {
+    slider.find(".nav").on("click", function () {
       /** Responsive items count **/
       const oneItem = 1;
       const twoItems = 2;
@@ -23,7 +23,7 @@
 
       /** Calculate left offset **/
       let offset;
-      if ($(this).hasClass('left')) {
+      if ($(this).hasClass("left")) {
         if (step === 0) {
           offset = `-${itemWidth * (itemLength - display)}`;
           step = itemLength - display;
