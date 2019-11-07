@@ -4,7 +4,7 @@
   height: 70px;
   top: 0;
   left: 0;
-  background: $blue;
+  background: $brand-color-primary;
   z-index: 10;
   @media(max-width: 768px) {
     height: 40px;
@@ -60,7 +60,7 @@
       width: 100%;
       margin: 0;
       height: calc(100% - 40px);
-      background: $blue;
+      background: $brand-color-primary;
       opacity: 0;
       visibility: hidden;
       transition: opacity .3s 0s, visibility 0s .2s;
@@ -77,15 +77,15 @@
       a.mainmenu-item-link {
         display: block;
         padding: 0 24px;
-        color: #fff;
+        color: white;
         text-decoration: none;
         position: relative;
         line-height: 70px;
         font-weight: 600;
 
         &:before {
-          content: '';
-          background-color: $orange;
+          content: "";
+          background-color: $brand-color-secondary;
           position: absolute;
           width: 100%;
           top: 0;
@@ -108,7 +108,7 @@
             display: none;
           }
           &:hover {
-            color: $orange;
+            color: $brand-color-secondary;
           }
         }
 
@@ -142,7 +142,7 @@
       left: 0;
       width: 100%;
       padding-bottom: 36px;
-      background: #fff;
+      background: white;
 
 
       @media(max-width: 768px) {
@@ -200,7 +200,7 @@
         }
 
         &:hover {
-          color: $orange;
+          color: $brand-color-secondary;
         }
       }
 
@@ -284,7 +284,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      background: #fff;
+      background: white;
       display: block;
       top: 50%;
       left: 50%;
@@ -296,7 +296,7 @@
         position: absolute;
         width: 100%;
         height: 2px;
-        background: #fff;
+        background: white;
         display: block;
         transition: .3s;
       }
@@ -347,7 +347,7 @@
 
     &.return {
       span {
-        background-color: #fff;
+        background-color: white;
 
         &:before {
           transform: translateX(100%) rotate(45deg);

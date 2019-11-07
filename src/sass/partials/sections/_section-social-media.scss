@@ -25,7 +25,7 @@
 
     .title {
       font-size: 20px;
-      color: #333333;
+      color: $font-color-secondary;
       font-weight: bold;
       padding-bottom: 5px;
     }
@@ -54,7 +54,7 @@
     a {
       text-decoration: none;
       display: block;
-      color: $grey;
+      color: $social-icons-color;
       padding: 5px 16px;
       font-size: 48px;
       @include hover-animation(.3, ease-in-out, 0, spin-scale);

@@ -126,13 +126,13 @@ q {
 
 blockquote:before,
 blockquote:after {
-  content: '';
+  content: "";
   content: none;
 }
 
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -300,7 +300,7 @@ hr {
 .bttn {
   display: inline-block;
   font-size: 15px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   border-radius: 4px;
   padding: 12px 23px;
@@ -326,7 +326,7 @@ hr {
 
 .bttn.white {
   border-radius: 0;
-  border: 2px solid #fff;
+  border: 2px solid white;
   background: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -335,11 +335,11 @@ hr {
 }
 
 .bttn.white:hover {
-  background: #fff;
+  background: white;
   color: #37495e;
 }
 
-.gray-bg {
+.darker-bg {
   background: #f5f5f5;
 }
 
@@ -453,7 +453,7 @@ hr {
 .navbar .mainmenu li.mainmenu-item a.mainmenu-item-link {
   display: block;
   padding: 0 24px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   position: relative;
   line-height: 70px;
@@ -461,7 +461,7 @@ hr {
 }
 
 .navbar .mainmenu li.mainmenu-item a.mainmenu-item-link:before {
-  content: '';
+  content: "";
   background-color: #ff8b38;
   position: absolute;
   width: 100%;
@@ -522,7 +522,7 @@ hr {
   left: 0;
   width: 100%;
   padding-bottom: 36px;
-  background: #fff;
+  background: white;
 }
 
 @media (max-width: 768px) {
@@ -692,7 +692,7 @@ hr {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: white;
   display: block;
   top: 50%;
   left: 50%;
@@ -710,7 +710,7 @@ hr {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: white;
   display: block;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -756,7 +756,7 @@ hr {
 }
 
 .navbar .mobile-menu-toggle.return span {
-  background-color: #fff;
+  background-color: white;
 }
 
 .navbar .mobile-menu-toggle.return span:before {
@@ -788,7 +788,7 @@ hr {
 
 .section-header {
   position: relative;
-  color: #fff;
+  color: white;
   padding: 135px 0 60px;
   min-height: 710px;
   -webkit-box-align: center;
@@ -822,7 +822,7 @@ hr {
 }
 
 .section-header .section-title {
-  color: #fff;
+  color: white;
   padding-bottom: 34px;
 }
 
@@ -833,7 +833,7 @@ hr {
 }
 
 .section-header .section-title:after {
-  background: #fff;
+  background: white;
 }
 
 @media (min-width: 769px) {
@@ -867,7 +867,7 @@ hr {
 }
 
 .section-header .get-started {
-  background: #fff;
+  background: white;
   display: inline-block;
   border-radius: 4px;
   overflow: hidden;
@@ -889,7 +889,7 @@ hr {
 .section-header .get-started .form-header .form-title {
   font-size: 20px;
   font-weight: bold;
-  color: #333;
+  color: #212121;
 }
 
 .section-header .get-started .form-header .form-title .orange {
@@ -912,7 +912,7 @@ hr {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #bdbdbd;
+  color: #bdbdbf;
   font-size: 14px;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -927,7 +927,7 @@ hr {
   display: block;
   height: 30px;
   padding: 0 15px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #d6d6d6;
   border-left: 1px solid #fbfbfb;
   border-right: 1px solid #fbfbfb;
   -webkit-transition: .3s;
@@ -964,7 +964,7 @@ hr {
 .section-header .get-started .form-footer input[type="submit"] {
   display: block;
   text-align: center;
-  color: #fff;
+  color: white;
   background: #ff8b38;
   font-size: 15px;
   padding: 18px 0;
@@ -1029,7 +1029,7 @@ hr {
 
 .section-social-media .col-content .title {
   font-size: 20px;
-  color: #333333;
+  color: #212121;
   font-weight: bold;
   padding-bottom: 5px;
 }
@@ -1156,16 +1156,16 @@ hr {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-  color: #fff;
+  color: white;
   cursor: pointer;
-  border: 1px solid #4d5d70;
+  border: 1px solid #4a627e;
   font-weight: bold;
   font-size: 15px;
 }
 
 .section-custom-tabs .custom-tabs .custom-tabs-nav .nav-item.active {
   background: #ff8b38;
-  border-color: #e9e9e9;
+  border-color: #ffe4d1;
   cursor: auto;
 }
 
@@ -1386,7 +1386,7 @@ hr {
 }
 
 .section-why-this-is-awesome .col h3 {
-  color: #333333;
+  color: #212121;
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 24px;
@@ -1420,7 +1420,7 @@ hr {
 }
 
 .section-why-this-is-awesome .col:hover [class^="icon-"] {
-  color: #fff;
+  color: white;
   background: #ff8b38;
 }
 
@@ -1472,21 +1472,21 @@ hr {
 .section-pricing-options .price-package .price-package-header .price,
 .section-pricing-options .price-package .price-package-header .descr {
   background: #37495e;
-  color: #fff;
+  color: white;
 }
 
 .section-pricing-options .price-package .price-package-header .title {
   font-size: 20px;
   font-weight: bold;
   padding: 20px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid white;
 }
 
 .section-pricing-options .price-package .price-package-header .price {
   font-family: "Raleway", sans-serif;
   font-size: 94px;
   font-weight: bold;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid white;
   padding: 5px 20px 0;
 }
 
@@ -1514,14 +1514,14 @@ hr {
   display: block;
   padding: 10px 0 12px 0;
   font-weight: bold;
-  color: #fff;
+  color: white;
 }
 
 .section-pricing-options .price-package .price-package-body li {
   text-transform: uppercase;
   padding: 13px 20px;
   border-bottom: 1px solid #f5f5f5;
-  background: #fff;
+  background: white;
 }
 
 .section-customer-reviews {
@@ -1600,7 +1600,7 @@ hr {
 .custom-slider .item .author .avatar.square {
   border-radius: 4px;
   padding: 2px;
-  border: 1px solid #cccccc;
+  border: 1px solid #d6d6d6;
   overflow: hidden;
 }
 
@@ -1676,7 +1676,7 @@ hr {
 
 .section-parallax-bg {
   padding: 100px 0 80px;
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
@@ -1691,12 +1691,12 @@ hr {
 }
 
 .section-parallax-bg .section-title {
-  color: #fff;
+  color: white;
   padding-bottom: 34px;
 }
 
 .section-parallax-bg .section-title:after {
-  background: #fff;
+  background: white;
 }
 
 .parallax-bg {
@@ -1753,7 +1753,7 @@ hr {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #bdbdbd;
+  color: #bdbdbf;
   font-size: 14px;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -1769,7 +1769,7 @@ hr {
   display: block;
   height: 30px;
   padding: 0 15px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #d6d6d6;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -1860,7 +1860,7 @@ hr {
 }
 
 .footer .social-links a:hover {
-  color: #fff;
+  color: white;
 }
 
 @media (max-width: 1150px) {

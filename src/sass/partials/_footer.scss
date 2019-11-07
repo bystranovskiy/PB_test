@@ -1,7 +1,7 @@
 .footer {
   text-align: center;
-  background: $blue;
-  color: #cccccc;
+  background: $brand-color-primary;
+  color: $social-icons-color;
   padding: 15px 0;
 
   .social-links {
@@ -14,13 +14,13 @@
     a {
       text-decoration: none;
       display: block;
-      color: $grey;
+      color: $social-icons-color;
       padding: 5px 8px;
       font-size: 24px;
       @include hover-animation(.3, ease-in-out, 0, spin-scale);
 
       &:hover {
-        color: #fff;
+        color: white;
       }
 
       @media(max-width: 1150px) {

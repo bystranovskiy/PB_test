@@ -22,7 +22,7 @@
       top: 50%;
       left: 10px;
       transform: translateY(-50%);
-      color: #bdbdbd;
+      color: lighten($font-color-primary, 21%);
       font-size: 14px;
       transition: .3s;
       cursor: text;
@@ -33,7 +33,7 @@
       display: block;
       height: 30px;
       padding: 0 15px;
-      border-bottom: 1px solid $grey;
+      border-bottom: 1px solid $input-border-color;
       transition: .3s;
 
       &:focus, &:not([value=""]) {

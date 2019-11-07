@@ -1,9 +1,9 @@
 .section-header {
   position: relative;
-  color: #fff;
+  color: white;
   padding: 135px 0 60px;
   min-height: 710px;
-  @include flex-align(center,center);
+  @include flex-align(center, center);
   @media(max-width: 768px) {
     text-align: center;
     padding: 80px 0 30px
@@ -23,7 +23,7 @@
   }
 
   .section-title {
-    color: #fff;
+    color: white;
     padding-bottom: 34px;
 
     @media(min-width: 769px) {
@@ -35,7 +35,7 @@
         transform: none;
         left: 0;
       }
-      background: #fff;
+      background: white;
     }
   }
 
@@ -54,7 +54,7 @@
   }
 
   .get-started {
-    background: #fff;
+    background: white;
     display: inline-block;
     border-radius: 4px;
     overflow: hidden;
@@ -66,16 +66,16 @@
 
     .form-header {
       padding: 17px;
-      background: $light-grey;
+      background: $section-darker-bg;
       text-align: center;
 
       .form-title {
         font-size: 20px;
         font-weight: bold;
-        color: #333;
+        color: $font-color-secondary;
 
         .orange {
-          color: $orange;
+          color: $brand-color-secondary;
         }
       }
     }
@@ -92,7 +92,7 @@
           top: 50%;
           left: 15px;
           transform: translateY(-50%);
-          color: #bdbdbd;
+          color: lighten($font-color-primary, 21%);
           font-size: 14px;
           transition: .3s;
           cursor: text;
@@ -103,9 +103,9 @@
           display: block;
           height: 30px;
           padding: 0 15px;
-          border-bottom: 1px solid $grey;
-          border-left: 1px solid #fbfbfb;
-          border-right: 1px solid #fbfbfb;
+          border-bottom: 1px solid $input-border-color;
+          border-left: 1px solid lighten($input-border-color, 14.5%);
+          border-right: 1px solid lighten($input-border-color, 14.5%);
           transition: .3s;
 
           &:focus, &:not([value=""]) {
@@ -134,8 +134,8 @@
       input[type="submit"] {
         display: block;
         text-align: center;
-        color: #fff;
-        background: $orange;
+        color: white;
+        background: $brand-color-secondary;
         font-size: 15px;
         padding: 18px 0;
         font-weight: 600;
@@ -144,7 +144,7 @@
         transition: .3s;
 
         &:hover {
-          background: lighten($orange, 5%);
+          background: lighten($brand-color-secondary, 5%);
         }
 
         &:active {

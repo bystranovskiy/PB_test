@@ -31,22 +31,22 @@
     .price-package-header {
 
       .title, .price, .descr {
-        background: $blue;
-        color: #fff;
+        background: $brand-color-primary;
+        color: white;
       }
 
       .title {
         font-size: 20px;
         font-weight: bold;
         padding: 20px;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid white;
       }
 
       .price {
         font-family: $font-secondary;
         font-size: 94px;
         font-weight: bold;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid white;
         padding: 5px 20px 0;
 
         span {
@@ -65,7 +65,7 @@
       }
 
       .accent {
-        background: $orange;
+        background: $brand-color-secondary;
         text-transform: uppercase;
         padding: 2px 20px;
 
@@ -73,7 +73,7 @@
           display: block;
           padding: 10px 0 12px 0;
           font-weight: bold;
-          color: #fff;
+          color: white;
         }
       }
 
@@ -83,8 +83,8 @@
       li {
         text-transform: uppercase;
         padding: 13px 20px;
-        border-bottom: 1px solid $light-grey;
-        background: #fff;
+        border-bottom: 1px solid $section-darker-bg;
+        background: white;
       }
     }
   }

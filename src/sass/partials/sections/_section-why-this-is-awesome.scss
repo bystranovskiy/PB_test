@@ -10,7 +10,7 @@
     }
 
     h3 {
-      color: #333333;
+      color: $font-color-secondary;
       font-size: 20px;
       font-weight: bold;
       padding-bottom: 24px;
@@ -26,21 +26,21 @@
     [class^="icon-"] {
       display: block;
       font-size: 28px;
-      border: 2px solid $orange;
+      border: 2px solid $brand-color-secondary;
       line-height: 66px;
       width: 70px;
       height: 70px;
       text-align: center;
       margin: 30px auto;
-      color: $orange;
+      color: $brand-color-secondary;
       border-radius: 50%;
       transition: .3s;
     }
 
     &:hover {
       [class^="icon-"] {
-        color: #fff;
-        background: $orange;
+        color: white;
+        background: $brand-color-secondary;
       }
     }
   }

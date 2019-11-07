@@ -27,7 +27,7 @@
     min-width: 395px;
 
     .review {
-      background: $light-grey;
+      background: $section-darker-bg;
       border-radius: 4px;
       line-height: 125%;
       padding: 25px 10px;
@@ -44,7 +44,7 @@
         height: 0;
         border-left: 11px solid transparent;
         border-right: 11px solid transparent;
-        border-top: 15px solid $light-grey;
+        border-top: 15px solid $section-darker-bg;
       }
     }
 
@@ -67,7 +67,7 @@
         &.square {
           border-radius: 4px;
           padding: 2px;
-          border: 1px solid $grey;
+          border: 1px solid $input-border-color;
           overflow: hidden;
 
           img {
@@ -97,7 +97,7 @@
     position: absolute;
     top: 110px;
     cursor: pointer;
-    color: $orange;
+    color: $brand-color-secondary;
     font-size: 24px;
     transition: .3s;
 
@@ -122,7 +122,7 @@
     .item {
       .review {
         background: $font-color-auxiliary;
-        color: $light-grey;
+        color: $section-darker-bg;
 
         &:after {
           border-top-color: $font-color-auxiliary;
