@@ -1,26 +1,33 @@
 (function ($) {
 
   /** Mobile menu toggle **/
+  $(".mobile-menu-toggle").on("click", ({currentTarget}) => {
 
-  $(".mobile-menu-toggle").on("click", function () {
-    if ($(this).hasClass("return")) {
-      $(this).removeClass("return");
+    const menuToggle = $(currentTarget);
+
+    if (menuToggle.hasClass("return")) {
+      menuToggle.removeClass("return");
       $(".mainmenu .submenu").removeClass("show");
     } else {
-      $(this).toggleClass("active");
+      menuToggle.toggleClass("active");
       $(".navbar .mainmenu").toggleClass("show");
     }
   });
 
-  $(".mainmenu .has-submenu").on("click", function (e) {
-    if ($(window).width() < 768) {
+
+  /** Mobile submenu toggle **/
+  $(".mainmenu .has-submenu").on("click", (e) => {
+
+    const menuToggle    = $(".mobile-menu-toggle");
+    const submenuToggle = $(e.currentTarget);
+    const width         = $(window).width();
+
+    if (width < 768) {
       e.preventDefault();
-      $(".mobile-menu-toggle").addClass("return");
-      $(this).next(".submenu").addClass("show");
+      menuToggle.addClass("return");
+      submenuToggle.next(".submenu").addClass("show");
     }
   });
-
-  /** Mobile menu toggle end **/
 
 
 })(jQuery);

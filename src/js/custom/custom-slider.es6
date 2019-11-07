@@ -1,6 +1,5 @@
 (function ($) {
 
-  /** Custom slider **/
   $(".custom-slider").each(function () {
     const slider      = $(this);
     const ticker      = slider.find(".ticker");
@@ -9,21 +8,25 @@
     const itemLength  = item.length;
     let   step        = 0;
 
-    slider.find(".nav").on("click", function () {
+    slider.find(".nav").on("click", ({currentTarget}) => {
+
+      const nav = $(currentTarget);
+
       /** Responsive items count **/
-      const oneItem = 1;
-      const twoItems = 2;
-      const threeItems = 3;
-      const smallScreen = 769;
-      const largeScreen = 1150;
-      const smallW    = $(window).width() < smallScreen;
-      const largeW    = $(window).width() > largeScreen;
+      const oneItem       = 1;
+      const twoItems      = 2;
+      const threeItems    = 3;
+      const smallScreen   = 769;
+      const largeScreen   = 1150;
+      const width         = $(window).width();
+      const smallW        = width < smallScreen;
+      const largeW        = width > largeScreen;
       const displayPlural = largeW ? threeItems : twoItems;
-      const display   = smallW ? oneItem : displayPlural;
+      const display       = smallW ? oneItem : displayPlural;
 
       /** Calculate left offset **/
       let offset;
-      if ($(this).hasClass("left")) {
+      if (nav.hasClass("left")) {
         if (step === 0) {
           offset = `-${itemWidth * (itemLength - display)}`;
           step = itemLength - display;
@@ -43,5 +46,5 @@
       ticker.animate({left: offset});
     });
   });
-  /** Custom slider end **/
+
 })(jQuery);
